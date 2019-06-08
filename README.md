@@ -2,4 +2,4 @@
 > APi接口来源于 `https://github.com/messoer/MessMusic`
 
 ![](./test/1.gif)
-![](./test/1.gif)
+![](./test/2.gif)
