@@ -1,7 +1,7 @@
 <template>
 <div class="fashion-container">
     <mt-swipe :auto="4000">
-        <mt-swipe-item v-for="item in lunbotu" :key="item.id"><img :src="item.coverImgUrl"></mt-swipe-item>
+        <mt-swipe-item v-for="item in lunbotu" :key="item.id"><img :src="item.coverImgUrl" @click="goTogedan(item.id)"></mt-swipe-item>
     </mt-swipe>
 
     <div class="recommendSongList">
@@ -28,9 +28,11 @@
         </div>
         <div class="recommendMVList">
             <div class="box-MV" v-for="mlist in MVList" :key="mlist.id">
-                <img :src="mlist.cover">
-                <p class="dexcription">{{ mlist.briefDesc }}</p>
-            </div>
+                <a @click="goToMV(mlist.id)">
+                    <img :src="mlist.cover">
+                    <p class="dexcription">{{ mlist.briefDesc }}</p>
+                </a>
+            </div>  
         </div>
         
     </div>
@@ -68,18 +70,18 @@ export default {
             this.$http.get("netease/mv/top").then(res => {
                 if(res.body.code === 200){
                     this.MVList = res.body.data.splice(0,6)
-                    console.log(this.MVList)
+                    // console.log(this.MVList)
                 }
             },(err) => {
                 console.log(err)
             })
         },
-        goTOgedan(id){
-            this.$router.push()
+        goTogedan(id){
+            this.$router.push({ name: 'gedaninfo',params:{ id }})
+        },
+        goToMV(id){
+            this.$router.push({ name: 'MVinfo',params:{ id }})
         }
-    },
-    components: {
-
     }
 }
 </script>

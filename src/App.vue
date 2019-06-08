@@ -7,7 +7,7 @@
     </div>
 
     <!-- 滑动横幅 -->
-    <div class="mui-content">
+    <!-- <div class="mui-content">
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll">
@@ -25,9 +25,8 @@
 						</a>
 					</div>
 				</div>
-
 			</div>
-		</div>
+		</div> -->
 
     <!-- 中间的 路由 router-view 区域 -->
     <transition mode='out-in'>
@@ -36,14 +35,14 @@
 
     <!-- 底部 Tabbar 区域 -->
     <div class="tabbar">
-      <!-- <aplayer autoplay :music="{
-          title: 'Preparation',
-          author: 'Hans Zimmer/Richard Harvey',
-          url: '',
-          pic: '',
-          lrc: ''
+      <aplayer v-if="$store.state.flag" autoplay :music="{
+          title: $store.state.name,
+          author: $store.state.author,
+          url: $store.state.url,
+          pic: $store.state.pic,
+          lrc: $store.state.lrc
         }">
-      </aplayer> -->
+      </aplayer>
     </div>
     
   </div>
@@ -55,19 +54,19 @@ import Aplayer from 'vue-aplayer'
 import mui from './lib/mui/js/mui.min.js'
 
 export default {
-  mounted(){
-    mui('.mui-scroll-wrapper').scroll({
-      deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-    });
-  },
+  // mounted(){
+  //   mui('.mui-scroll-wrapper').scroll({
+  //     deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+  //   });
+  // },
   components:{
     Aplayer
-  },
-  methods: {
-    goTo(path){
-      this.$router.push(path)
-    }
   }
+  // methods: {
+  //   goTo(path){
+  //     this.$router.push(path)
+  //   }
+  // }
 }
 
 </script>
@@ -102,7 +101,7 @@ export default {
       }
     }
     .tabbar{
-      opacity: 0.5;
+      opacity: 0.7;
       position: fixed;
       bottom: 0;
       width: 100%;
