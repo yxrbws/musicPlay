@@ -30,7 +30,9 @@
 
     <!-- 中间的 路由 router-view 区域 -->
     <transition mode='out-in'>
-      <router-view></router-view>
+      <keep-alive include="fashion,MVlist,HotSongList,RankingList,gedaninfo,MVinfo">
+        <router-view></router-view>
+      </keep-alive>
     </transition>
 
     <!-- 底部 Tabbar 区域 -->
@@ -54,11 +56,6 @@ import Aplayer from 'vue-aplayer'
 import mui from './lib/mui/js/mui.min.js'
 
 export default {
-  // mounted(){
-  //   mui('.mui-scroll-wrapper').scroll({
-  //     deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-  //   });
-  // },
   components:{
     Aplayer
   }

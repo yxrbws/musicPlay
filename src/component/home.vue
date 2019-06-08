@@ -11,7 +11,7 @@
                         <a class="mui-control-item" data-wid="tab-top-subpage-2.html" @click="goTo('/home/HotSongList')">
                             热门歌单
                         </a>
-                        <a class="mui-control-item" data-wid="tab-top-subpage-3.html" @click="goTo('/home/HotSongList')">
+                        <a class="mui-control-item" data-wid="tab-top-subpage-3.html" @click="goTo('/home/MVlist')">
                             热门MV
                         </a>
                         <a class="mui-control-item" data-wid="tab-top-subpage-4.html" @click="goTo('/home/RankingList')">

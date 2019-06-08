@@ -1,5 +1,5 @@
 <template>
-    <h1>MVinfo</h1>
+    <h1>热门歌手</h1>
 </template>
 
 <script>

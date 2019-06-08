@@ -15,11 +15,12 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 Vue.url.options.root="https://v1.itooi.cn/";
 
-import { Header, Swipe, SwipeItem } from 'mint-ui'
+import { Header, Swipe, SwipeItem, Lazyload } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.use(Lazyload)
 
 // 导入 App 组件
 import app from './App.vue'

@@ -86,6 +86,7 @@ export default {
             } 
             .des{
                 img{
+                    border: none;
                     width: 40%;
                     height: 150px;
                     padding: 10px;
