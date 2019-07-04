@@ -14,7 +14,6 @@
 ### js game
 [贪吃蛇](https://yxrbws.github.io/game/Snake/snake.html)          
 [烟花](https://yxrbws.github.io/game/Fireworks/index.html)          
-[俄罗斯方块](https://yxrbws.github.io/game/Tetris/tetris.html)       
-[扫雷](https://yxrbws.github.io/game/Minesweeper/minesweeper.html)         
+[俄罗斯方块](https://yxrbws.github.io/game/Tetris/tetris.html)               
 [2048](https://yxrbws.github.io/game/2048/index.html)         
 [shoot](https://yxrbws.github.io/game/shoot/simple-shoot.html)
