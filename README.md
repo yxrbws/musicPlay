@@ -10,3 +10,6 @@
 
 
 > APi接口来源于 `https://github.com/messoer/MessMusic` 接口文档说明 [查看](https://messoer.github.io/mess-api-doc/#/)
+
+### js game
+[贪吃蛇](https://yxrbws.github.io/snake/)
