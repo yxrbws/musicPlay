@@ -13,3 +13,4 @@
 
 ### js game
 [贪吃蛇](https://yxrbws.github.io/snake/)
+[烟花](https://yxrbws.github.io/firework/)
