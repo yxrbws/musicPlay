@@ -61,7 +61,7 @@ export default {
                 // console.log(res.body.data)
             })
             this.$http.get("netease/url?id=41642901&quality=flac").then(res => {
-                console.log(res.body.data)
+                // console.log(res.body.data)
             })
             // console.log(data)
             // 

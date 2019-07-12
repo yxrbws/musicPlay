@@ -25,7 +25,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),// new 一个热更新的模块对象 启用热更新 第3步
     new htmlWebpackPlugin({// 创建一个 在内存中生成的 HTML 页面的插件
       template: path.join(__dirname,'./src/index.html'),//指定 模板页面，将来会根据指定页面的路径，去生成内存中的页面
-      filename: 'index.html'// 指定生成页面的名称
+      filename: './index.html'// 指定生成页面的名称
     }),
     new VueLoaderPlugin()
   ],

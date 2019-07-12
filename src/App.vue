@@ -2,8 +2,9 @@
   <div class="app-container">
     <!-- 顶部 Header 区域 -->
     <div class="header">
-      <span class="left">网易云音乐</span>
-      <span class="mui-icon mui-icon-search right"></span>
+      <span class="left" @click=goHome>网易云音乐</span>
+      <div class="input"><input type="text" @click=getFouce><span class="mui-icon mui-icon-search"></span></div>
+      <span class="mui-icon mui-icon-person right" @click=goLogin></span>
     </div>
 
     <!-- 滑动横幅 -->
@@ -37,7 +38,7 @@
 
     <!-- 底部 Tabbar 区域 -->
     <div class="tabbar">
-      <aplayer v-if="$store.state.flag" autoplay :music="{
+      <aplayer v-if="$store.state.flag" :listFolded="true" :list="$store.state.musiclist" listMaxHeight="100px" autoplay :music="{
           title: $store.state.name,
           author: $store.state.author,
           url: $store.state.url,
@@ -45,6 +46,9 @@
           lrc: $store.state.lrc
         }">
       </aplayer>
+
+      <!-- <aplayer v-if="$store.state.flag" autoplay :music="$store.state.musiclist" listMaxHeight='100' listFolded='true'>
+      </aplayer> -->
     </div>
     
   </div>
@@ -58,12 +62,22 @@ import mui from './lib/mui/js/mui.min.js'
 export default {
   components:{
     Aplayer
+  },
+  methods: {
+    // goTo(path){
+    //   this.$router.push(path)
+    // }
+
+    getFouce(){
+      this.$router.push({ name: 'sreach'})
+    },
+    goHome(){
+      this.$router.push({ name: 'fashion'})
+    },
+    goLogin(){
+      this.$router.push({ name: 'login'})
+    }
   }
-  // methods: {
-  //   goTo(path){
-  //     this.$router.push(path)
-  //   }
-  // }
 }
 
 </script>
@@ -89,6 +103,25 @@ export default {
         line-height: 40px;
         margin-left: 15px;
         color: white;
+      }
+      .input{
+        width: 50%;
+        margin: 5px 20px 5px;
+        height: 30px;
+        float: left;
+        background-color: rgba(90, 89, 89, 0.3);
+        // border: 1px solid black;
+        border-radius: 25px;
+        .mui-icon-search{
+          color: #aaa;
+        }
+        input{
+          margin:2px 2px 2px 15px; 
+          width: 75%;
+          height: 20px;
+          background-color: rgba(90, 89, 89, 0);
+          border: none;
+        }
       }
       .right{
         float: right;

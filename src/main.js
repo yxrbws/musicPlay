@@ -38,11 +38,13 @@ Vue.filter("countForm",function(value){
 })
 const store = new Vuex.Store({
   state: {
+    login: null,
     name: null,
     author: null,
     url: null,
     pic: null,
     lrc: null,
+    musiclist: [],
     flag: false
   },
   mutations: {
@@ -53,6 +55,13 @@ const store = new Vuex.Store({
       state.pic = mes[0].songs[0].al.picUrl
       state.url = "https://v1.itooi.cn/netease/url?id="+mes[1]+"&quality=flac"
       state.flag = true
+      title = mes[0].songs[0].al.name
+      author = mes[0].songs[0].ar[0].name
+      pic = mes[0].songs[0].al.picUrl
+      url = "https://v1.itooi.cn/netease/url?id="+mes[1]+"&quality=flac"
+      obj = {title,author,pic,url}
+      state.musiclist.push(obj)
+      console.log("state.musiclist",state.musiclist)
       }
   }
 })
@@ -62,7 +71,7 @@ var vm = new Vue({
   data:{},
   render: c => c(app),
   created(){
-    console.log(store)
+    // console.log(store)
     this.$http.get("").then(res => {
       console.log(res)
     },(err) => {
