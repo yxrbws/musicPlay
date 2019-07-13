@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- 顶部 Header 区域 -->
     <div class="header">
-      <span class="left" @click=goHome>网易云音乐</span>
+      <span class="left" @click=goHome>云云云音乐</span>
       <div class="input"><input type="text" @click=getFouce><span class="mui-icon mui-icon-search"></span></div>
       <span class="mui-icon mui-icon-person right" @click=goLogin></span>
     </div>
