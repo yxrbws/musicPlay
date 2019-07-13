@@ -2,6 +2,8 @@
 > 这是一个用 vuejs写的仿网易云的webapp
 > 技术栈：vue vue-router vue-resource mint-ui
 
+#### 在线（手机模式）[预览](https://yxrbws.github.io/musicPlay/)
+
 ### test:
 ![](./test/3.png)
 ![](./test/4.png)
